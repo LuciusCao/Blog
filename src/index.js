@@ -4,7 +4,8 @@ import { Router, Route } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 
-import App from './components/App.jsx';
+// import Test from './components/Test.jsx';
+import Home from './layouts/Home.jsx';
 
 const networkInterface = createNetworkInterface({
   uri: 'localhost:8000'
@@ -19,7 +20,7 @@ const history = createHistory();
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Router history={history}>
-      <Route path='/' component={App} />
+      <Route path='/' component={Home} />
     </Router>
   </ApolloProvider>,
   document.getElementById('App')
