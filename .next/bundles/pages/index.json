@@ -1,1 +1,0 @@
-{"component":"module.exports=webpackJsonp([4],{174:function(e,t,n){\"use strict\";Object.defineProperty(t,\"__esModule\",{value:!0});var u=n(13),o=function(e){return e&&e.__esModule?e:{default:e}}(u);t.default=function(){return o.default.createElement(\"div\",null,\"Welcome to next.js!\")}},368:function(e,t,n){e.exports=n(174)}},[368]);"}
