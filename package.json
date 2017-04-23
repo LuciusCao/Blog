@@ -11,9 +11,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "next": "^2.1.0",
     "react": "^15.5.3",
     "react-apollo": "^1.0.1",
-    "react-dom": "^15.5.3"
+    "react-dom": "^15.5.3",
+    "react-router": "^4.1.1"
   }
 }
