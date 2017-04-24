@@ -4,8 +4,19 @@ import { Router, Route, Redirect } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 
+import WebFont from 'webfontloader';
+
 import Test from './components/Test.jsx';
 import Home from './layouts/Home.jsx';
+
+const WebFontConfig = {
+  custom: {
+    families: ['Balthazar'],
+    urls: ['../fonts/fonts.css']
+  }
+}
+
+WebFont.load(WebFontConfig)
 
 const networkInterface = createNetworkInterface({
   uri: 'localhost:8000'
