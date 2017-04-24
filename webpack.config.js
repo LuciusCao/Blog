@@ -19,14 +19,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        loaders: [
-            'style',
-            'css?importLoaders=1',
-            'font?format[]=truetype&format[]=woff&format[]=embedded-opentype'
-        ]
       }
     ]
   },
