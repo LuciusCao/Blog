@@ -30,6 +30,7 @@ const StyledLink = styled(Link)`
   justify-content: center;
   align-item: center;
   font-size: 112px;
+  font-family: Balthazar
   text-decoration: none;
 
   &:hover {
