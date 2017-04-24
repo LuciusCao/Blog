@@ -8,10 +8,11 @@ import WebFont from 'webfontloader';
 
 import Test from './components/Test.jsx';
 import Home from './layouts/Home.jsx';
+import Articles from './layouts/Articles.jsx';
 
 const WebFontConfig = {
   custom: {
-    families: ['Balthazar'],
+    families: ['Balthazar','Roboto:regular,medium'],
     urls: ['../fonts/fonts.css']
   }
 }
@@ -32,9 +33,9 @@ render(
   <ApolloProvider client={client}>
     <Router history={history}>
       <div>
-        <Route exact path='/' component={Home} />
-        <Route path='/blogs/tech' component={Test} />
-        <Route path='/blogs/design' component={Test} />
+        <Route exact path='/' component={Home}/>
+        <Route path='/blogs/tech' component={Articles}/>
+        <Route path='/blogs/design' component={Test}/>
       </div>
     </Router>
   </ApolloProvider>,
