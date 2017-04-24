@@ -10,36 +10,39 @@ const TaiChi = styled.div`
   flex-direction: column;
 `
 
-const TechBG = styled.div`
+const BG = styled.div`
   height: 50%;
   width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const TechBG = styled(BG)`
   background: black;
-  display:flex;
-  justify-content: center;
-  align-items: center
 `
 
-const DesignBG = styled.div`
-  height: 50%;
-  width: 100%;
+const DesignBG = styled(BG)`
   background: white;
-  display:flex;
-  justify-content: center;
-  align-items: center
 `
 
-const TechLink = styled(Link)`
+const StyledLink = styled(Link)`
+  justify-content: center;
+  align-item: center;
+  font-size: 112px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
+const TechLink = styled(StyledLink)`
   color: white;
-  justify-content: center;
-  align-item: center;
-  font-size: 72px;
 `
 
-const DesignLink = styled(Link)`
-  color: black;
-  justify-content: center;
-  align-item: center;
-  font-size: 72px;
+const DesignLink = styled(StyledLink)`
+  color: black
 `
 
 export default () => (
