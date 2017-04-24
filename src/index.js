@@ -1,10 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route } from 'react-router';
+import { render } from 'react-dom';
+import { Router, Route, Redirect } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 
-// import Test from './components/Test.jsx';
+import Test from './components/Test.jsx';
 import Home from './layouts/Home.jsx';
 
 const networkInterface = createNetworkInterface({
@@ -17,10 +17,14 @@ const client = new ApolloClient({
 
 const history = createHistory();
 
-ReactDOM.render(
+render(
   <ApolloProvider client={client}>
     <Router history={history}>
-      <Route path='/' component={Home} />
+      <div>
+        <Route exact path='/' component={Home} />
+        <Route path='/blogs/tech' component={Test} />
+        <Route path='/blogs/design' component={Test} />
+      </div>
     </Router>
   </ApolloProvider>,
   document.getElementById('App')
