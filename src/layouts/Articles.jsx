@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const WindowHeight = window.screen.availHeight;
+const WindowHeight = window.innerHeight;
 
 const TaiChi = styled.div`
   display: flex;
