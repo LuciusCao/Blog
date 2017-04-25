@@ -61,21 +61,26 @@ const Header = styled.div`
   align-items: center;
 `
 
+const Image = styled.img`
+  height: 24px;
+  width: 24px;
+`
+
 export default (props) => (
   <TaiChi>
     <Menu>
       <ToolBar>
         <Back>
-          <ClickableArea>
-            <Link to='/'>
-              <img src='../../assests/arrow-back.png'></img>
-            </Link>
-          </ClickableArea>
+          <Link to='/'>
+            <ClickableArea>
+              <Image src='.././assets/arrow-back.png'/>
+            </ClickableArea>
+          </Link>
         </Back>
         <Header>Category</Header>
         <Drop>
           <ClickableArea>
-            <img src='../../assests/arrow-drop.png'></img>
+            <Image src='.././assets/arrow-drop.png'/>
           </ClickableArea>
         </Drop>
       </ToolBar>
