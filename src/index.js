@@ -6,14 +6,14 @@ import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apol
 
 import WebFont from 'webfontloader';
 
-import Test from './src/components/Test.jsx';
-import Home from './src/layouts/Home.jsx';
-import Articles from './src/layouts/Articles.jsx';
+import Test from './components/Test.jsx';
+import Home from './ayouts/Home.jsx';
+import Articles from './layouts/Articles.jsx';
 
 const WebFontConfig = {
   custom: {
     families: ['Balthazar','Roboto:regular,medium'],
-    urls: ['./fonts/fonts.css']
+    urls: ['../fonts/fonts.css']
   }
 }
 
