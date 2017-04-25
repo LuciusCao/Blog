@@ -7,7 +7,7 @@ import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apol
 import WebFont from 'webfontloader';
 
 import Test from './components/Test.jsx';
-import Home from './ayouts/Home.jsx';
+import Home from './layouts/Home.jsx';
 import Articles from './layouts/Articles.jsx';
 
 const WebFontConfig = {
