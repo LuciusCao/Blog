@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Redirect } from 'react-router';
-import createHistory from 'history/createBrowserHistory';
+import { Route, Redirect } from 'react-router';
+import { HashRouter } from 'react-router-dom'
 import { ApolloClient, ApolloProvider, createNetworkInterface } from 'react-apollo';
 
 import WebFont from 'webfontloader';
@@ -27,17 +27,15 @@ const client = new ApolloClient({
   networkInterface: networkInterface
 });
 
-const history = createHistory();
-
 render(
   <ApolloProvider client={client}>
-    <Router history={history}>
+    <HashRouter>
       <div>
         <Route exact path='/' component={Home}/>
         <Route path='/blogs/tech' component={Articles}/>
         <Route path='/blogs/design' component={Test}/>
       </div>
-    </Router>
+    </HashRouter>
   </ApolloProvider>,
   document.getElementById('App')
 )
