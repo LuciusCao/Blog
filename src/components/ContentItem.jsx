@@ -19,10 +19,20 @@ const ContentItem = styled(Link)`
   }
 `
 
-export default (props) => {
-  <li>
-    <ContentItem to={`/${props.category.toLowerCase()}/${props._id}`}>
-      {props.title}
-    </ContentItem>    
-  </li>
+export default class ContentItem extends React.Component {
+
+  static propTypes = {
+    article: React.PropTypes.object,
+  }
+
+  render() {
+    { _id, category, title } = this.props.article;
+
+    return (
+      <ContentItem to={`/${category}/${_id}`}>
+        {title}
+      </ContentItem>
+    )
+  }
+
 }
