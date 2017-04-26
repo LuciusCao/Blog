@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const ContentItem = styled(Link)`
+const ContentStyle = styled(Link)`
   display: flex;
   justify-content: flex-end;
   align-item: flex-start;
@@ -13,6 +14,7 @@ const ContentItem = styled(Link)`
   width: 100%;
   margin-left: 80px;
   margin-right: 24px;
+  color: white;
 
   &:hover {
     text-decoration: underline;
@@ -20,19 +22,25 @@ const ContentItem = styled(Link)`
 `
 
 export default class ContentItem extends React.Component {
-
-  static propTypes = {
-    article: React.PropTypes.object,
+  constructor(props) {
+    super(props)
   }
-
+  
   render() {
-    { _id, category, title } = this.props.article;
+    const { _id, category, title } = this.props.article;
 
     return (
-      <ContentItem to={`/${category}/${_id}`}>
+      <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
         {title}
-      </ContentItem>
+      </ContentStyle>
     )
   }
+}
 
+ContentItem.propTypes = {
+  article: PropTypes.shape({
+    _id: PropTypes.string,
+    category: PropTypes.string,
+    title: PropTypes.string,
+  }),
 }

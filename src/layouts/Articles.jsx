@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import ContentWithData from '../components/content.jsx';
+
 const WindowHeight = window.innerHeight;
 
 const TaiChi = styled.div`
@@ -66,7 +68,7 @@ const Image = styled.img`
   width: 24px;
 `
 
-export default (props) => (
+export default () => (
   <TaiChi>
     <Menu>
       <ToolBar>
@@ -84,6 +86,7 @@ export default (props) => (
           </ClickableArea>
         </Drop>
       </ToolBar>
+      <ContentWithData/>
     </Menu>
   </TaiChi>
 )
