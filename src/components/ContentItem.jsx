@@ -21,25 +21,14 @@ const ContentStyle = styled(Link)`
   }
 `
 
-export default ({ _id, category, title }) => {
+export default function ContentItem(props) {
+  const { _id, category, title } = props.post
   return (
     <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
       {title}
     </ContentStyle>
   )
 }
-
-// export default class ContentItem extends React.Component {
-//   render() {
-//     const { _id, category, title } = this.props.post;
-//
-//     return (
-//       <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
-//         {title}
-//       </ContentStyle>
-//     )
-//   }
-// }
 
 ContentItem.propTypes = {
   post: PropTypes.shape({

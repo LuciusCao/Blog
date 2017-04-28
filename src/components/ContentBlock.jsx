@@ -27,7 +27,12 @@ const MonthYear = styled.div`
   color: white;
 `
 
-export default ({ month, year, posts }) => {
+const UnstyledList = styled.ul`
+  list-style: none;
+`
+
+export default function ContentBlock(props) {
+  const { month, year, posts } = props.contentBlock
   return (
     <BlockStyle>
       <MonthYear>
@@ -39,21 +44,6 @@ export default ({ month, year, posts }) => {
     </BlockStyle>
   )
 }
-
-// export default class ContentBlock extends React.Component {
-//   render() {
-//     const { month, year, posts } = this.props.contentBlock;
-//
-//     <BlockStyle>
-//       <MonthYear>
-//         {month}, {year}
-//       </MonthYear>
-//       <UnstyledList>
-//         {posts.map((post) => <ContentItem key={post._id} post={post}/>)}
-//       </UnstyledList>
-//     </BlockStyle>
-//   }
-// }
 
 ContentBlock.propTypes = {
   contentBlock: PropTypes.shape({

@@ -4,38 +4,25 @@ import styled from 'styled-components';
 import { graphql, gql } from 'react-apollo';
 
 import ContentBlock from './ContentBlock.jsx';
+import Loading from './Loading.jsx'
 
 const Wrapper = styled.div`
-
+  margin: 0px;
 `
 
-function Content({ data, loading, errors}) {
+function Content({ data:{ getContentByCategory, loading }}) {
   if (loading) {
-    return <Loading />
-  } else if (errors) {
-    return <Errors />
+    return <p>loading now</p>
   } else {
     return (
       <Wrapper>
-        {data.getContentByCategory.map((contentBlock) =>
+        {getContentByCategory.map((contentBlock) =>
           <ContentBlock key={contentBlock.month+contentBlock.year} contentBlock={contentBlock}/>
         )}
       </Wrapper>
     )
   }
 }
-
-// class Content extends React.Component {
-//   render() {
-//     console.log(this.props.data);
-//     const { data } = this.props;
-//     <Wrapper>
-//       {data.getContentByCategory.map((contentBlock) =>
-//         <ContentBlock key={contentBlock.month+contentBlock.year} contentBlock={contentBlock}/>
-//       )}
-//     </Wrapper>
-//   }
-// }
 
 const getContent = gql`
   query contentQuery($category: String) {
