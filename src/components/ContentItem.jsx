@@ -21,24 +21,28 @@ const ContentStyle = styled(Link)`
   }
 `
 
-export default class ContentItem extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-  
-  render() {
-    const { _id, category, title } = this.props.article;
-
-    return (
-      <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
-        {title}
-      </ContentStyle>
-    )
-  }
+export default ({ _id, category, title }) => {
+  return (
+    <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
+      {title}
+    </ContentStyle>
+  )
 }
 
+// export default class ContentItem extends React.Component {
+//   render() {
+//     const { _id, category, title } = this.props.post;
+//
+//     return (
+//       <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
+//         {title}
+//       </ContentStyle>
+//     )
+//   }
+// }
+
 ContentItem.propTypes = {
-  article: PropTypes.shape({
+  post: PropTypes.shape({
     _id: PropTypes.string,
     category: PropTypes.string,
     title: PropTypes.string,

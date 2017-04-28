@@ -20,7 +20,7 @@ const WebFontConfig = {
 WebFont.load(WebFontConfig)
 
 const networkInterface = createNetworkInterface({
-  uri: 'localhost:8000/graphql'
+  uri: 'http://127.0.0.1:8000/graphql'
 });
 
 const client = new ApolloClient({

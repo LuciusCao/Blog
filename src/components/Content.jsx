@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { graphql, gql } from 'react-apollo';
 
@@ -9,20 +9,33 @@ const Wrapper = styled.div`
 
 `
 
-class Content extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    const data = this.props.data.getContentByCategory;
-    <Wrapper>
-      {data.map((contentBlock) =>
-        <ContentBlock key={contentBlock.month+contentBlock.year} contentBlock={contentBlock}/>
-      )}
-    </Wrapper>
+function Content({ data, loading, errors}) {
+  if (loading) {
+    return <Loading />
+  } else if (errors) {
+    return <Errors />
+  } else {
+    return (
+      <Wrapper>
+        {data.getContentByCategory.map((contentBlock) =>
+          <ContentBlock key={contentBlock.month+contentBlock.year} contentBlock={contentBlock}/>
+        )}
+      </Wrapper>
+    )
   }
 }
+
+// class Content extends React.Component {
+//   render() {
+//     console.log(this.props.data);
+//     const { data } = this.props;
+//     <Wrapper>
+//       {data.getContentByCategory.map((contentBlock) =>
+//         <ContentBlock key={contentBlock.month+contentBlock.year} contentBlock={contentBlock}/>
+//       )}
+//     </Wrapper>
+//   }
+// }
 
 const getContent = gql`
   query contentQuery($category: String) {
@@ -32,11 +45,18 @@ const getContent = gql`
       posts {
         _id
         title
+        category
       }
     }
   }
 `
 
-const ContentWithData = graphql(getContent)(Content);
+const ContentWithData = graphql(getContent, {
+  options: (props) => ({
+    variables: {
+      category: 'technology'
+    }
+  })
+})(Content);
 
 export default ContentWithData;
