@@ -8,7 +8,7 @@ import WebFont from 'webfontloader';
 
 import Test from './components/Test.jsx';
 import Home from './layouts/Home.jsx';
-import Articles from './layouts/Articles.jsx';
+import Posts from './layouts/Posts.jsx';
 
 const WebFontConfig = {
   custom: {
@@ -32,7 +32,7 @@ render(
     <HashRouter>
       <div>
         <Route exact path='/' component={Home}/>
-        <Route path='/blogs/tech' component={Articles}/>
+        <Route path='/blogs/tech' component={Posts}/>
         <Route path='/blogs/design' component={Test}/>
       </div>
     </HashRouter>
