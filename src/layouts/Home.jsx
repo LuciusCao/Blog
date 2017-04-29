@@ -2,10 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const WindowHeight = window.innerHeight;
-
 const TaiChi = styled.div`
-  height: ${WindowHeight}px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 `

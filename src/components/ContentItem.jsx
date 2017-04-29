@@ -5,26 +5,29 @@ import styled from 'styled-components';
 
 const ContentStyle = styled(Link)`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-item: flex-start;
   font-size: 16px;
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
-  width: 100%;
   margin-left: 80px;
   margin-right: 24px;
   color: white;
+  padding-bottom: 12px;
+  opacity: 0.7;
+  letter-spacing0.7px;
 
   &:hover {
     text-decoration: underline;
+    opacity: 1;
   }
 `
 
 export default function ContentItem(props) {
   const { _id, category, title } = props.post
   return (
-    <ContentStyle to={`/${category.toLowerCase()}/${_id}`}>
+    <ContentStyle to={`/${category.toLowerCase()}/${title}`} id={_id}>
       {title}
     </ContentStyle>
   )

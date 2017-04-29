@@ -4,12 +4,10 @@ import styled from 'styled-components';
 
 import ContentWithData from '../components/content.jsx';
 
-const WindowHeight = window.innerHeight;
-
 const TaiChi = styled.div`
   display: flex;
   flex-direction: row;
-  height: ${WindowHeight}px;
+  height: 100%;
 `
 
 const ToolBar = styled.div`
@@ -21,9 +19,12 @@ const ToolBar = styled.div`
 `
 
 const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 360px;
-  height: ${WindowHeight}px;
+  height: 100%;
   background: black;
+  position: fixed;
 `
 
 const ClickableArea = styled.div`
@@ -57,6 +58,7 @@ const Header = styled.div`
   font-size: 20px;
   font-family: Roboto;
   font-weight: 500;
+  letter-spacing:0.7px;
   width: 100%;
   color: white;
   display: flex;

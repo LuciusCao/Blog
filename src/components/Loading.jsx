@@ -5,8 +5,4 @@ const LoadingIndicator = styled.p`
   color: white;
 `
 
-export default () => {
-  <LoadingIndicator>
-    loading now
-  </LoadingIndicator>
-}
+export default () => <LoadingIndicator>loading now</LoadingIndicator>

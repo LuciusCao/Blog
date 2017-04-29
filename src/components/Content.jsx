@@ -7,12 +7,14 @@ import ContentBlock from './ContentBlock.jsx';
 import Loading from './Loading.jsx'
 
 const Wrapper = styled.div`
-  margin: 0px;
+  overflow: auto;
+  height: 100%;
 `
 
 function Content({ data:{ getContentByCategory, loading }}) {
   if (loading) {
-    return <p>loading now</p>
+    // return <p>loading now</p>
+    return <Loading/>
   } else {
     return (
       <Wrapper>
