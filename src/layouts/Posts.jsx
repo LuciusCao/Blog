@@ -70,7 +70,7 @@ const Image = styled.img`
   width: 24px;
 `
 
-export default Posts = () => (
+const Posts = () => (
   <TaiChi>
     <Menu>
       <ToolBar>
@@ -92,3 +92,5 @@ export default Posts = () => (
     </Menu>
   </TaiChi>
 )
+
+export default Posts;

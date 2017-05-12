@@ -5,8 +5,10 @@ const ErrorIndicator = styled.div`
 
 `
 
-export default Errors = () => {
+const Errors = () => {
   <ErrorIndicator>
     something went wrong
   </ErrorIndicator>
 }
+
+export default Errors;

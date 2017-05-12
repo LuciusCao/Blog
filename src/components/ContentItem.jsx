@@ -24,7 +24,7 @@ const ContentStyle = styled(Link)`
   }
 `
 
-export default ContentItem = (props) => {
+const ContentItem = (props) => {
   const { _id, category, title } = props.post
   return (
     <ContentStyle to={`/${category.toLowerCase()}/${title}`} id={_id}>
@@ -40,3 +40,5 @@ ContentItem.propTypes = {
     title: PropTypes.string,
   }),
 }
+
+export default ContentItem;
