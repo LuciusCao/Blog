@@ -42,7 +42,7 @@ const DesignLink = styled(StyledLink)`
   color: black
 `
 
-export default () => (
+export default Home = () => (
   <TaiChi>
     <TechBG>
       <TechLink to="/blogs/tech">TECH</TechLink>

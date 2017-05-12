@@ -47,7 +47,7 @@ const IconWrapper = styled.div`
 
 const Back = styled(IconWrapper)`
   margin-left: 12px;
-  margin-right: 32px;
+  margin-right: 20px;
 `
 
 const Drop = styled(IconWrapper)`
@@ -70,7 +70,7 @@ const Image = styled.img`
   width: 24px;
 `
 
-export default () => (
+export default Posts = () => (
   <TaiChi>
     <Menu>
       <ToolBar>

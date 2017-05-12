@@ -24,7 +24,7 @@ const MonthYear = styled.div`
 const UnstyledList = styled.div`
 `
 
-export default function ContentBlock(props) {
+export default ContentBlock = (props) => {
   const { month, year, posts } = props.contentBlock;
   const numToMon = {
     1: "January",

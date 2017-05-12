@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   height: 100%;
 `
 
-function Content({ data:{ getContentByCategory, loading }}) {
+Content = ({ data:{ getContentByCategory, loading }}) => {
   if (loading) {
     // return <p>loading now</p>
     return <Loading/>

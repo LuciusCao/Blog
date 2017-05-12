@@ -16,7 +16,7 @@ const ContentStyle = styled(Link)`
   color: white;
   padding-bottom: 12px;
   opacity: 0.7;
-  letter-spacing0.7px;
+  letter-spacing: 0.7px;
 
   &:hover {
     text-decoration: underline;
@@ -24,7 +24,7 @@ const ContentStyle = styled(Link)`
   }
 `
 
-export default function ContentItem(props) {
+export default ContentItem = (props) => {
   const { _id, category, title } = props.post
   return (
     <ContentStyle to={`/${category.toLowerCase()}/${title}`} id={_id}>
