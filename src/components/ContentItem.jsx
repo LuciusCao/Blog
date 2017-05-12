@@ -16,7 +16,7 @@ const ContentStyle = styled(Link)`
   color: white;
   padding-bottom: 12px;
   opacity: 0.7;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
 
   &:hover {
     text-decoration: underline;

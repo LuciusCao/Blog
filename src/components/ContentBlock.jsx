@@ -18,7 +18,7 @@ const MonthYear = styled.div`
   color: white;
   margin-right: 24px;
   padding-bottom:12px;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
 `
 
 const UnstyledList = styled.div`
